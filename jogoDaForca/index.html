@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca Temático</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Forca</h1>
+
+        <div class="theme-selection">
+            <h2>Escolha um Tema:</h2>
+            <select id="theme-select">
+                <option value="frutas">Frutas</option>
+                <option value="animais">Animais</option>
+                <option value="paises">Países</option>
+                <option value="objetos">Objetos</option>
+            </select>
+            <button id="start-button">Começar Jogo</button>
+        </div>
+
+        <div id="game-area" class="hidden">
+            <div id="word-display"></div>
+            <div id="hangman-display">
+                <img id="hangman-image">
+            </div>
+            <div id="guesses">
+                <label for="letter-input">Digite uma letra:</label>
+                <input type="text" id="letter-input" maxlength="1">
+                <button id="guess-button">Chutar!</button>
+            </div>
+            <div id="message"></div>
+            <div id="used-letters">Letras usadas: </div>
+            <button id="reset-button" class="hidden">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

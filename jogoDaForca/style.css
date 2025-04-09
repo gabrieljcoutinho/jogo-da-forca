@@ -1,0 +1,171 @@
+body {
+    font-family: 'Electrolize', sans-serif; /* Uma fonte com pegada futurista */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121212; /* Fundo escuro para realçar o neon */
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    background-color: #1e1e1e; /* Um cinza bem escuro */
+    padding: 50px; /* Aumenta o espaçamento para o visual neon respirar */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 173, 239, 0.5); /* Sombra neon azul */
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+h1 {
+    color: #00adee; /* Azul neon */
+    margin-bottom: 40px;
+    font-size: 3em;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #00adee, 0 0 20px #00adee; /* Efeito de brilho neon */
+}
+
+.theme-selection, #game-area {
+    margin-bottom: 40px;
+}
+
+.theme-selection h2 {
+    color: #f0f; /* Rosa/Magenta neon */
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 0 0 5px #f0f, 0 0 10px #f0f;
+}
+
+select, button {
+    padding: 15px 25px;
+    border: 2px solid #00adee; /* Borda neon azul */
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-right: 20px;
+    background-color: #212121; /* Cinza escuro para os botões */
+    color: #fff;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 173, 239, 0.3);
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%2300adee" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+    padding-right: 35px;
+}
+
+select:focus {
+    outline: none;
+    border-color: #ff4081; /* Rosa neon ao focar */
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+}
+
+button {
+    color: #fff;
+}
+
+button:hover {
+    background-color: #00adee; /* Azul neon ao passar o mouse */
+    color: #121212; /* Texto preto ao passar o mouse */
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 173, 239, 0.7);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 173, 239, 0.7);
+}
+
+#word-display {
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    letter-spacing: 20px;
+    color: #ff4081; /* Rosa neon para a palavra */
+    font-weight: bold;
+    text-shadow: 0 0 8px #ff4081, 0 0 15px #ff4081;
+}
+
+#hangman-display img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 10px #00adee); /* Sombra neon na imagem (se você a readicionar) */
+}
+
+#guesses label {
+    font-size: 1.3em;
+    color: #00adee; /* Azul neon para o label */
+    margin-right: 15px;
+    text-shadow: 0 0 3px #00adee;
+}
+
+#guesses input[type="text"] {
+    padding: 12px;
+    border: 2px solid #ff4081; /* Borda rosa neon no input */
+    border-radius: 6px;
+    font-size: 1.2em;
+    margin-right: 15px;
+    max-width: 60px;
+    text-align: center;
+    background-color: #212121;
+    color: #fff;
+    text-shadow: 0 0 3px #ff4081;
+}
+
+#guesses input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.7);
+}
+
+#guesses button {
+    padding: 12px 22px;
+    font-size: 1.2em;
+}
+
+#message {
+    font-weight: bold;
+    margin-top: 25px;
+    font-size: 1.4em;
+    color: #ff6f00; /* Laranja neon para mensagens */
+    text-shadow: 0 0 5px #ff6f00, 0 0 10px #ff6f00;
+}
+
+.hidden {
+    display: none;
+}
+
+#used-letters {
+    margin-top: 20px;
+    font-style: italic;
+    color: #f0f; /* Rosa/Magenta neon para letras usadas */
+    font-size: 1.2em;
+    text-shadow: 0 0 3px #f0f;
+}
+
+#reset-button {
+    margin-top: 35px;
+    background-color: #ff4081; /* Rosa neon para o botão de reset */
+    color: #121212;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.7);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#reset-button:hover {
+    background-color: #fff;
+    color: #ff4081;
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.9);
+}
+
+#reset-button:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.9);
+}
